@@ -45,6 +45,90 @@ function generatePassword() {
         }
       }
 
+    } else if (includingLetters === true && includingNumber === true) {
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = numberAndLetters[Math.floor(Math.random() * numberAndLetters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+
+    } else if (includingLetters === true && includingSpecialcharecters === true) {
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = lettersAndspecialLetters[Math.floor(Math.random() * lettersAndspecialLetters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+
+    }else if(includingNumber === true && includingSpecialcharecters === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = numberAndspecialLetters[Math.floor(Math.random() * numberAndspecialLetters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }else if(includingUppercase === true && includingSpecialcharecters === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = uppercaseArrayAndspecialLetters[Math.floor(Math.random() * uppercaseArrayAndspecialLetters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }else if(includingUppercase === true && includingNumber === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = uppercaseArrayAndnumbers[Math.floor(Math.random() * uppercaseArrayAndnumbers.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }else if(includingUppercase === true && includingLetters === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = uppercaseArrayAndlowercase[Math.floor(Math.random() * uppercaseArrayAndlowercase.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }
+    else if(includingLetters === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = letters[Math.floor(Math.random() * letters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }
+    else if(includingNumber === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = number[Math.floor(Math.random() * number.length)];
+        for (var key in index) {
+          parsed += parseInt(index[key]);
+        }
+      }
+    }else if(includingSpecialcharecters === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = specialLetters[Math.floor(Math.random() * specialLetters.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
+    }else if(includingUppercase === true){
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = uppercaseArray[Math.floor(Math.random() * uppercaseArray.length)];
+        for (var key in index) {
+          parsed += index[key].toUpperCase();
+        }
+      }
+    }
+  };
+  
+
+  } else {
+    alert("Password must a number, must at 8 characters,and must be less than 129");
+    return;
+  }
+
+}
 
 function writePassword() {
   var password = generatePassword();
