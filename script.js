@@ -23,7 +23,27 @@ var uppercaseArrayAndspecialLetters=["A", "B", "C", "D", "E", "F", "G", "H", "I"
 var uppercaseArrayAndnumbers=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",'1', '2', '3', '4', '5', '6', '7', '8', '9', ];
 
 var parsed = "";
+function generatePassword() {
+  var lengthOfpassword = prompt("Enter your the number of charcters for your password:");
+  lengthOfpassword = parseInt(lengthOfpassword);
 
+  if (lengthOfpassword >= 8 && lengthOfpassword <= 129 && isNaN(lengthOfpassword) !== true) {
+    var includingLetters = confirm("Do you want to include letters?");
+    var includingNumber = confirm("Do you want to include numbers?");
+    var includingSpecialcharecters = confirm("Do you want to include special charecters?");
+    var includingUppercase = confirm("Do you want to include upper case letters?");
+    if(includingLetters === false && includingNumber === false && includingSpecialcharecters === false && includingUppercase===false){
+      alert('You have to select at least one character type!');
+      return;
+    }else{
+
+     if (includingLetters === true && includingNumber === true && includingSpecialcharecters === true && includingUppercase) {
+      for (i = 0; i < lengthOfpassword; i++) {
+        var index = bigArray[Math.floor(Math.random() * bigArray.length)];
+        for (var key in index) {
+          parsed += index[key];
+        }
+      }
 
 
 function writePassword() {
