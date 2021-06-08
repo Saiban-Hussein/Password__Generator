@@ -150,7 +150,7 @@ function convertCharacterToUpperCased(charactersList){
     uppercasedCharacters.push(charactersList[i].toUpperCase())
   }
   return uppercasedCharacters;
-}
+} 
 
 var uppercasedCharacters = convertCharacterToUpperCased(lowercasedCharacters);
 
@@ -173,7 +173,7 @@ function validationAndPasswordOption(){
     alert("You must select at least one charter type!");
     return;
   }
-      
+         
     var passwordOption ={
       passwordLength,
       specialCharacters,
@@ -209,8 +209,12 @@ function generatePassword(){
         allPossibleCharacters=allPossibleCharacters.concat(uppercasedCharacters);
         guaranteedCharacters=guaranteedCharacters.concat(uppercasedCharacters[Math.floor(Math.random() * uppercasedCharacters.length)]);
       } 
-    // console.log(allPossibleCharacters);
-    console.log(guaranteedCharacters);
+  
+    for ( var i=0; i<passwordOption.passwordLength;i++){
+      var possibleCharacters=allPossibleCharacters[Math.floor(Math.random() * allPossibleCharacters.length)];
+      userPassword=userPassword.concat(possibleCharacters);
+    }
+    console.log(userPassword);
   }
 
 
