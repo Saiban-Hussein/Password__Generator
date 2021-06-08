@@ -18,7 +18,7 @@ This application emphasizes the use of Javascript to generate a random, secure p
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
-
+  
 Check my work  - Click!
 https://github.com/Saiban-Hussein/Password__Generator
 https://saiban-hussein.github.io/Password__Generator/
